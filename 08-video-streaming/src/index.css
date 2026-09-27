@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #080808;
+  color: #ffffff;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+}

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #FFFBF0;
+  color: #431407;
+}
+
+.font-serif-display {
+  font-family: 'Playfair Display', serif;
+}

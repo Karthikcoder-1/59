@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Newsreader', serif;
+  background-color: #fcfbf9;
+  color: #141414;
+}
+
+.font-serif-headline {
+  font-family: 'Playfair Display', serif;
+}
+
+.editorial-rule {
+  height: 3px;
+  background-color: #990000;
+  width: 100%;
+}

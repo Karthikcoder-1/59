@@ -1,0 +1,191 @@
+# 59 Full-Stack Project Prompts — Full-Marks Feature Set
+
+**How to use this:** Each numbered block below is a self-contained, copy-paste-ready prompt for one project. Paste one at a time into an AI coding assistant (Claude Code, Cursor, etc.) to scaffold that project. Every prompt:
+- Lists a feature set that goes beyond the base description (the extra depth is what pushes a submission from "meets requirements" to "full marks").
+- Assigns a **distinct color palette + layout style** so that if a grader opens all 59 side by side, none of them look like re-skins of each other.
+- Ends with an **Assets** line telling the AI whether to wire up AI image/music generation automatically (e.g. via an image-generation API for product photos, avatars, banners, album art) so you never have to manually source placeholder media.
+
+Default stack across the set is **React + Vite + TailwindCSS + Zustand**, with the backend swapped between **Firebase** (Auth/Firestore/Storage — fastest to stand up), **Supabase/Postgres** (for relational, report-heavy systems), and **Node/Express + MongoDB** (for a few, for variety) so the 59 don't all share one backend either.
+
+---
+
+### 1. E-Commerce Platform
+> Build a full-stack e-commerce platform (React + Vite + Tailwind + Zustand, Firebase Auth/Firestore/Storage, Stripe test-mode checkout). Features: multi-role auth (customer/seller/admin), product catalog with variants and filters, cart + secure checkout, real-time order tracking, seller inventory dashboard, "customers also bought" recommendation engine, order history with downloadable invoices, reviews & ratings, wishlist, and an admin analytics dashboard (revenue, top products, churn). UI: pure black-and-white base with a single lime-green accent, oversized sans-serif headings, generous whitespace, card-grid catalog — keep this palette exclusive to this project. Assets: auto-generate product photography via an image-generation API whenever a seller doesn't upload their own; no music needed.
+
+### 2. Online Food Delivery System
+> Build a food delivery platform (React + Vite + Tailwind + Zustand, Firebase Firestore for live order state, Firebase Cloud Functions for status pushes). Features: restaurant discovery with cuisine/rating filters, live menu builder for restaurants, cart with multi-restaurant handling rules, real-time order-status stepper (placed → preparing → out for delivery → delivered) via Firestore listeners, delivery-partner map view, ratings for both restaurant and rider, promo codes, and a restaurant-side order queue dashboard. UI: warm terracotta and cream palette, rounded food-photo cards, hand-drawn-style icons. Assets: auto-generate dish photos for any menu item added without an image; no music.
+
+### 3. Inventory Management System
+> Build an inventory management system (React + Vite + Tailwind + Zustand, Supabase/Postgres for relational stock data). Features: multi-warehouse stock tracking, low-stock threshold alerts, supplier directory with reorder automation, barcode/SKU lookup, stock-movement audit log, purchase-order workflow, turnover & aging reports with exportable CSV, and role-based access (warehouse staff vs. manager). UI: industrial palette — steel gray, safety-yellow accents, dense data-grid dashboards, monospace numerals for stock counts. Assets: none required — use an icon set only, no generated imagery or audio.
+
+### 4. Learning Management System (LMS)
+> Build an LMS (React + Vite + Tailwind + Zustand, Firebase Auth/Firestore/Storage for video and file uploads). Features: course builder with modules/lessons, video + PDF lesson support, assignment submission and grading, quizzes with auto-grading, discussion forum per course, progress tracker with completion percentage, auto-generated PDF certificates on course completion, and instructor analytics (engagement, drop-off points). UI: academic navy-and-white palette, serif headings for course titles, sidebar-driven layout reminiscent of a campus portal. Assets: auto-generate a course cover thumbnail via an image-generation API whenever an instructor publishes a course without one; no music.
+
+### 5. Social Media Platform
+> Build a social media platform (React + Vite + Tailwind + Zustand, Firebase Firestore + Storage, Cloud Functions for feed fan-out). Features: profile creation, image/video posts, likes/comments/shares, direct messaging, personalized algorithmic feed, friend/follow suggestions, event creation with RSVPs, stories that expire after 24h, and content moderation flags for reported posts. UI: vibrant purple-to-pink gradient, pill-shaped buttons, circular avatar-forward card feed. Assets: auto-generate a default avatar image via an image-generation API for any user who hasn't uploaded a profile photo; no music.
+
+### 6. Healthcare Appointment System
+> Build a healthcare appointment system (React + Vite + Tailwind + Zustand, Supabase/Postgres for patient/doctor relational records). Features: doctor search by specialty/availability, booking/reschedule/cancel flow, patient record vault, automated appointment reminders (email/SMS stub), virtual-consultation video room link generation, doctor schedule optimizer, and a clinic-admin dashboard for wait-time analytics. UI: clinical trust palette — soft teal and white, calm rounded iconography, minimal shadows. Assets: none needed beyond a generic doctor-avatar placeholder set; no music.
+
+### 7. Employee Management System
+> Build an employee/HR management system (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: employee directory with role/department tagging, attendance tracking with clock-in/out, leave-request workflow with manager approval, payslip generation (PDF), performance-review cycles, org-chart visualization, and a self-service employee dashboard. UI: corporate deep-blue and slate palette, structured table-first layout, condensed professional typography. Assets: none required — no generated imagery or audio.
+
+### 8. Video Streaming Platform
+> Build a video streaming platform (React + Vite + Tailwind + Zustand, Firebase Storage for uploads, HLS.js for adaptive playback). Features: content browsing by category, watchlists, continue-watching row, creator upload studio, adaptive-bitrate playback, parental-control PIN lock, subscription-tier gating, and a recommendation row based on watch history. UI: near-black cinematic theme, red accent, large poster-style thumbnails, edge-to-edge hero banner. Assets: auto-generate a poster/thumbnail via an image-generation API for any uploaded video lacking one; auto-generate a short royalty-free-style background loop for the landing-page hero via a music-generation API.
+
+### 9. Expense Tracker
+> Build a personal/small-business expense tracker (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: transaction logging with category tagging, budget-setting per category with overspend alerts, recurring-expense scheduler, multi-account support, spending-insight charts (pie/line), CSV/PDF export, and a monthly summary email digest (stub). UI: forest-green and cream palette, monospace figures, clean chart-forward dashboard. Assets: none needed.
+
+### 10. Online Examination System
+> Build an online examination system (React + Vite + Tailwind + Zustand, Supabase/Postgres, server-side timer authority to prevent client tampering). Features: question-bank builder (MCQ/essay/coding), randomized question order per test-taker, countdown timer with auto-submit, instant auto-grading for objective questions, tab-switch/focus-loss detection as an anti-cheating signal, instructor review queue for essay answers, and a results dashboard with per-question analytics. UI: crisp white and indigo, distraction-free single-column exam view, sans-serif clock-forward header. Assets: none needed.
+
+### 11. Car Rental System
+> Build a car rental platform (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: vehicle search with date/location filters, price comparison, booking + secure payment, digital rental agreement, admin fleet manager with maintenance-schedule tracking, damage-report photo upload at pickup/return, and loyalty-tier discounts. UI: sleek charcoal-and-chrome palette, angular card cut corners, bold condensed headings. Assets: auto-generate vehicle listing photos via an image-generation API when an admin adds a car without images; no music.
+
+### 12. Weather App
+> Build a weather app (React + Vite + Tailwind + Zustand, a public weather API such as Open-Meteo). Features: current conditions + 7-day forecast, hourly breakdown, severe-weather push alerts, interactive radar/map overlay, saved-locations list, unit toggle (°C/°F), and personalized tips (e.g. "carry an umbrella") based on forecast. UI: sky-blue gradient background that shifts with time of day, soft cloud illustrations, rounded glassmorphic widgets. Assets: none needed — weather icon set only.
+
+### 13. Online Voting System
+> Build a secure online voting system (React + Vite + Tailwind + Zustand, Supabase/Postgres with row-level security). Features: voter registration/verification, encrypted single-use ballots, candidate/proposal browsing, real-time turnout counter (without revealing results early), tamper-evident audit trail, admin election-scheduling console, and post-close results dashboard with charts. UI: formal navy-and-crimson palette, serif ballot-style typography, seal/stamp iconography. Assets: none needed.
+
+### 14. Fitness Tracker
+> Build a fitness tracker (React + Vite + Tailwind + Zustand, Firebase Firestore, optional wearable-data import stub). Features: workout logging with exercise library, step/calorie tracking, sleep and heart-rate sync fields, custom goal-setting, streak/achievement badges, progress charts over time, and personalized weekly recommendations based on trends. UI: high-energy neon-orange-on-black palette, bold condensed numerals, circular progress rings. Assets: none needed.
+
+### 15. File Sharing Platform
+> Build a file-sharing platform (React + Vite + Tailwind + Zustand, Firebase Storage + Firestore for metadata). Features: drag-and-drop upload, folder organization, granular sharing permissions (view/edit/link-expiry), file versioning, large-file chunked upload, in-browser preview for common types (PDF/image/doc), and usage-analytics dashboard (storage used, most-shared files). UI: soft blue-gray palette, flat folder/file iconography, spacious drag-drop zones. Assets: none needed.
+
+### 16. Content Management System (CMS)
+> Build a CMS (React + Vite + Tailwind + Zustand, Firebase Firestore, a rich-text/drag-drop page builder). Features: drag-and-drop page builder, reusable content blocks, role-based publishing workflow (draft → review → publish), customizable templates, built-in SEO fields (meta title/description/slug), version history with rollback, and a built-in analytics widget. UI: editorial newspaper palette — black, white, one blood-red rule line — serif headlines, multi-column grid. Assets: none required by default; offer an optional image-generation hook for hero images per page.
+
+### 17. Online Banking System
+> Build a simulated online banking system (React + Vite + Tailwind + Zustand, Supabase/Postgres with strict RLS policies). Features: account dashboard with balances, fund transfers between accounts, bill-pay scheduler, transaction history with statement PDF export, loan-request workflow, recurring-payment setup, multi-account management, and multi-factor authentication (TOTP). UI: vault-like charcoal-and-metallic-gold palette, precise grid layout, lock/shield iconography. Assets: none needed.
+
+### 18. Event Management System
+> Build an event management platform (React + Vite + Tailwind + Zustand, Firebase Firestore, Stripe test-mode for ticketing). Features: event-page builder, attendee registration, tiered ticket sales, seating/schedule customization, automated reminder emails (stub), check-in QR-code scanner, and post-event analytics (attendance, revenue, feedback scores). UI: celebratory pastel-gradient palette with confetti accents, playful script for event titles. Assets: auto-generate an event banner via an image-generation API from the event title/theme if the organizer doesn't upload one; no music.
+
+### 19. Health Records System
+> Build a health-records management system (React + Vite + Tailwind + Zustand, Supabase/Postgres, strict access-control policies). Features: patient record vault (history, prescriptions, lab reports), provider record-update interface, appointment-linked record access, prescription e-signing, audit log of every record access for compliance, and a patient-facing portal to view/download their own records. UI: sterile white-and-soft-green palette, clean grid iconography, no decorative flourishes. Assets: none needed.
+
+### 20. Travel Booking Platform
+> Build a travel booking platform (React + Vite + Tailwind + Zustand, integrate a flights/hotels mock API or a real one like Amadeus sandbox). Features: combined flight + hotel + cab search, fare comparison table, itinerary builder, real-time booking confirmation, saved-trips dashboard, price-drop alerts, and travel-alert notifications. UI: wanderlust sunset-gradient palette (orange to pink), subtle map-texture backgrounds, rounded destination cards. Assets: auto-generate a destination hero image via an image-generation API for any location without stock photography; no music.
+
+### 21. Learning Hub
+> Build a learning-resource hub (React + Vite + Tailwind + Zustand, Firebase Firestore/Storage). Features: resource library (articles/videos/PDFs), quiz engine with instant scoring, personalized course-recommendation feed, progress dashboard with completion streaks, instructor upload console for materials and assignments, and downloadable completion certificates. UI: soft lavender palette, friendly rounded typography, progress-bar-forward cards. Assets: auto-generate a resource-cover thumbnail via image generation when none is supplied; no music.
+
+### 22. Hospital Management System
+> Build a hospital management system (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: patient admission/discharge tracking, appointment + consultation scheduling, prescription management, bed/ward resource allocation, staff duty-roster scheduling, billing module tied to treatments, and an admin dashboard for occupancy and resource analytics. UI: calm blue-white clinical grid, clear sans-serif labels, no imagery clutter. Assets: none needed.
+
+### 23. Online Art Gallery
+> Build an online art gallery/marketplace (React + Vite + Tailwind + Zustand, Firebase Storage for high-res art images). Features: artist profile pages, artwork upload with pricing/description, category browsing, purchase flow, live-bidding auction mode with countdown, buyer reviews, and curated "exhibition" collections on the homepage. UI: gallery-style cream-and-charcoal palette, large image-first layout, elegant serif captions. Assets: this project is inherently image-driven — real artwork uploads are expected, but auto-generate a placeholder artwork thumbnail via an image-generation API for any demo/seed data; no music.
+
+### 24. CRM System
+> Build a CRM system (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: contact/lead database, sales-pipeline kanban board, interaction/activity logging, automated follow-up reminders, email-campaign automation stub, deal-forecasting analytics dashboard, and role-based team views. UI: slate-blue-and-white dashboard-dense palette, data-table-forward layout. Assets: none needed.
+
+### 25. News Aggregator
+> Build a news aggregator (React + Vite + Tailwind + Zustand, integrate a real news API like NewsAPI or GNews). Features: category filtering (tech/politics/sports/etc.), save-for-later reading list, personalized recommendation feed based on reading history, source-diversity indicator, search, and a daily-digest email stub. UI: bold red-and-white editorial palette, dense headline grid, serif headline type. Assets: none needed — article images come from the source API.
+
+### 26. Expense Sharing App
+> Build a bill-splitting/expense-sharing app (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: group creation, expense logging with flexible split rules (equal/percentage/exact), automatic "who owes whom" simplification algorithm, payment-reminder notifications, running group balance history, and settle-up tracking. UI: friendly mint-green-and-white palette, rounded avatar-forward group cards. Assets: none needed.
+
+### 27. Food Recipe App
+> Build a recipe-sharing app (React + Vite + Tailwind + Zustand, Firebase Firestore/Storage). Features: recipe upload with step-by-step instructions, ingredient-based search, dietary-preference filters, personalized collections/favorites, community ratings and comments, and a "cook mode" step-through view with timers. UI: warm mustard-and-terracotta palette, food-photography-first cards, hand-lettered-style headings. Assets: auto-generate a finished-dish photo via an image-generation API for any recipe submitted without one; no music.
+
+### 28. Property Management System
+> Build a property management system (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: property listing management, tenant application workflow, lease document generation, rent-payment tracking with automated reminders, maintenance-request ticketing, and an owner-facing occupancy/revenue dashboard. UI: navy-and-warm-gold palette, property-card grid, clean serif address headers. Assets: auto-generate an exterior/interior property image via an image-generation API for listings without photos; no music.
+
+### 29. Online Auction System
+> Build a real-time online auction platform (React + Vite + Tailwind + Zustand, Firebase Firestore listeners for live bid updates). Features: item listing with reserve price, live countdown-timer bidding, outbid notifications, proxy/auto-bidding, seller dashboard for active listings, and post-auction payment + shipping workflow. UI: high-stakes deep-red-and-black palette, large countdown-timer typography. Assets: auto-generate a product image via an image-generation API for listings without photos; no music.
+
+### 30. Personal Portfolio Website
+> Build a personal portfolio website (React + Vite + Tailwind + Zustand). Features: project gallery with case-study pages, skills/timeline section, embedded blog, contact form with spam protection, SEO-optimized metadata per page, and a downloadable resume link. UI: monochrome base (black/white/gray) with exactly one bold accent color of the owner's choice, oversized display typography, asymmetric grid. Assets: auto-generate abstract background/hero art via an image-generation API to avoid generic stock imagery; no music.
+
+### 31. Ride-Sharing App
+> Build a ride-sharing app (React + Vite + Tailwind + Zustand, Firebase Firestore for live location updates, a maps API for routing). Features: rider request flow with fare estimate, live driver-location tracking on map, driver-side accept/navigate flow, in-app chat between rider and driver, ride history, and mutual rating system. UI: yellow-and-black cab-inspired palette, map-centric full-bleed layout. Assets: none needed beyond default avatar placeholders.
+
+### 32. Online Grocery Store
+> Build an online grocery store (React + Vite + Tailwind + Zustand, Firebase Firestore, Stripe test-mode checkout). Features: category browsing, smart cart with quantity/unit handling, scheduled-delivery slot picker, substitution preferences for out-of-stock items, loyalty-discount codes, admin stock-availability sync, and real-time order tracking. UI: fresh green-and-white palette, clean product-grid cards, crisp sans-serif. Assets: auto-generate product images via an image-generation API for items uploaded without photos; no music.
+
+### 33. Music Streaming App
+> Build a music streaming app (React + Vite + Tailwind + Zustand, Firebase Storage for audio files, Web Audio API for playback). Features: browse by genre/artist/album, custom playlist creation, offline-download simulation, queue management, lyrics display sync, and a "for you" recommendation rail based on listening history. UI: dark theme with neon-cyan waveform visualizers, album-art-forward grid. Assets: auto-generate album-cover art via an image-generation API for any uploaded track without one; auto-generate short original background/demo tracks via a music-generation API to populate the catalog for demo purposes.
+
+### 34. Forum Application
+> Build a discussion forum (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: topic categories/boards, threaded replies with nesting, upvote/downvote, moderation tools (pin/lock/delete), reputation/badge system, followed-thread notifications, and full-text search. UI: muted blue-gray palette, threaded-indent layout, small circular avatars. Assets: none needed.
+
+### 35. Online Ticket Booking
+> Build an event/movie ticket booking system (React + Vite + Tailwind + Zustand, Supabase/Postgres for seat-inventory locking). Features: event/showtime browsing, interactive seat-map selection with live-lock to prevent double-booking, secure checkout, digital ticket with QR code, organizer promotions module, and real-time seat-availability updates. UI: cinematic deep-purple-and-black palette, glowing seat-map grid. Assets: auto-generate an event/movie poster via an image-generation API when none is supplied; no music.
+
+### 36. Student Report System
+> Build a student report/grading system (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: grade and attendance entry for teachers, auto-compiled progress reports, customizable grading-scale templates, parent/student portal for viewing reports, performance-trend charts across terms, and exportable report-card PDFs. UI: soft pastel-blue palette, chart-heavy parent-friendly dashboard. Assets: none needed.
+
+### 37. Task Management System
+> Build a task/project management tool (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: drag-and-drop kanban board, task assignment with deadlines, project grouping, subtasks/checklists, deadline-reminder notifications, activity/audit log, and a team-workload view. UI: pastel kanban-column palette (soft blue/green/yellow lanes), card-based drag-drop interactions. Assets: none needed.
+
+### 38. Quiz Builder
+> Build a quiz-builder platform (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: quiz creation with MCQ/true-false/open-ended question types, question randomization, live/synchronous quiz mode with a real-time leaderboard, auto-scoring, per-question analytics for creators, and shareable quiz links. UI: bright game-show palette — yellow and purple, chunky rounded buttons, big score counters. Assets: none needed.
+
+### 39. Food Waste Management System
+> Build a food-donation/waste-reduction platform (React + Vite + Tailwind + Zustand, Firebase Firestore with geolocation queries). Features: surplus-food posting with expiry timers, location-based matching to nearby recipients/charities, claim-and-pickup workflow, donation-history tracking, perishable-item urgency alerts, and an impact dashboard (meals saved, CO2 avoided). UI: earthy green-and-brown palette, eco-friendly leaf iconography. Assets: auto-generate a food-item photo via an image-generation API when a donor doesn't attach one; no music.
+
+### 40. Pet Adoption Platform
+> Build a pet adoption platform (React + Vite + Tailwind + Zustand, Firebase Firestore/Storage). Features: pet profile listings (photos, breed, health records), adoption-application workflow, shelter/adopter messaging, background-check status stub, favorites/saved-pets list, and a shelter-side dashboard for managing listings. UI: warm peach-and-cream palette, large photo-first pet cards, rounded-corner playfulness. Assets: auto-generate a pet photo via an image-generation API only for demo/seed listings (real adoptions should use real photos); no music.
+
+### 41. Online Donation Platform
+> Build a charitable-donation platform (React + Vite + Tailwind + Zustand, Firebase Firestore, Stripe test-mode payments). Features: campaign creation with goal tracking, secure donation checkout, donor dashboard with history and auto-generated tax-receipt PDFs, campaign-update posts, social-sharing links, and a transparency ledger showing fund usage. UI: coral-and-white palette, animated progress-bar campaign cards. Assets: auto-generate a campaign banner via an image-generation API from the campaign description if none is uploaded; no music.
+
+### 42. Disaster Management System
+> Build a disaster-response coordination platform (React + Vite + Tailwind + Zustand, Firebase Firestore with real-time geolocation). Features: incident reporting with map pin-drop, resource/volunteer allocation board, live relief-status tracking, location-based alert broadcasts, affected-area data dashboard, and a request-vs-fulfilled resource matcher. UI: high-contrast red-black-white alert palette, map-first layout with pulsing incident markers. Assets: none needed.
+
+### 43. Budget Planner
+> Build a personal budget planner (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: income/expense input, category-based budgeting with limits, savings-goal tracker with progress visualization, spending-pattern pie/line charts, overspend alerts, and monthly-summary auto-generated report. UI: calm teal palette, pie-chart-forward dashboard, rounded card widgets. Assets: none needed.
+
+### 44. Blood Banking System
+> Build a blood-bank management system (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: donor registration with blood-type profile, real-time inventory levels by blood type, emergency-request broadcast to matching donors, donation-history and eligibility-cooldown tracking, hospital-request fulfillment workflow, and a low-stock alert dashboard. UI: urgent deep-red-and-white palette, clean iconographic blood-drop motif used sparingly. Assets: none needed.
+
+### 45. Agriculture Project (Farmer-Friendly Web App)
+> Build a farmer-to-buyer marketplace (React + Vite + Tailwind + Zustand, Firebase Firestore/Storage). Features: produce listing with quantity/price, buyer browsing and direct ordering, market-price trend charts, farmer sales dashboard, weather/advisory tips integration, and a review system for both farmers and buyers. UI: earthy olive-green-and-wheat-gold palette, rustic textured cards. Assets: auto-generate a produce photo via an image-generation API for listings without images; no music.
+
+### 46. Hotel Booking Platform
+> Build a hotel booking platform (React + Vite + Tailwind + Zustand, Supabase/Postgres for room-inventory locking). Features: room search with amenity/location/date filters, real-time availability and price comparison, secure booking with cancellation policy, hotel-admin room and rate management, guest reviews, and a booking-analytics dashboard for hotel owners. UI: luxury deep-burgundy-and-gold palette, elegant serif headings, spacious room-card layout. Assets: auto-generate room/property photos via an image-generation API for listings without images; no music.
+
+### 47. Online Library Management System
+> Build a library management system (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: catalog search with availability status, reserve/borrow workflow, due-date and overdue-fine tracking, borrowing-history per user, librarian inventory console (add/retire titles), and a reports module (most-borrowed, overdue list). UI: classic wood-brown-and-cream palette, catalog-card layout with a library-index feel. Assets: auto-generate a book-cover image via an image-generation API for entries without one; no music.
+
+### 48. Feedback Management System
+> Build a customer-feedback management platform (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: customizable survey/form builder, multi-channel feedback collection (rating, free text), sentiment tagging, admin categorization and response workflow, trend-analytics dashboard, and automated thank-you/follow-up messages. UI: bright sky-blue-and-white palette, star-rating-forward visuals, friendly rounded forms. Assets: none needed.
+
+### 49. Home Tutor Finder
+> Build a tutor-finder marketplace (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: tutor search by subject/location/availability, tutor profile pages with qualifications and reviews, in-app scheduling and fee-setting for tutors, student-tutor messaging, booking-confirmation workflow, and a ratings-based ranking system. UI: friendly orange-and-white palette, profile-card grid with rounded photo frames. Assets: auto-generate a default tutor-avatar image via an image-generation API when none is uploaded; no music.
+
+### 50. Music Streaming Platform
+> Build a second, distinctly different music streaming platform focused on discovery (React + Vite + Tailwind + Zustand, Firebase Storage, Web Audio API). Features: genre-based discovery feed, curated/algorithmic playlists, artist-follow system, offline-download simulation, song/album search, and social sharing of playlists. UI: deep-purple gradient theme (visually distinct from Project 33's dark/neon-cyan look), large album-art tile grid, rounded pill navigation. Assets: auto-generate album art via an image-generation API for uploads without cover images; auto-generate short demo/background tracks via a music-generation API to seed the catalog.
+
+### 51. Freelancer Marketplace
+> Build a freelancer marketplace (React + Vite + Tailwind + Zustand, Node/Express + MongoDB backend for flexible proposal/portfolio schemas). Features: job posting by clients, freelancer portfolio profiles, proposal/bidding system, milestone-based escrow payment simulation, in-app messaging, project tracking with deliverable uploads, and a two-sided review system. UI: indigo-and-white palette, portfolio-card grid, clean professional sans-serif. Assets: auto-generate a default portfolio-cover image via an image-generation API for freelancers without uploaded work samples; no music.
+
+### 52. Online Job Application Tracker
+> Build a job-application tracker (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: saved-job list with status pipeline (applied/interview/offer/rejected), application-deadline reminders, interview-schedule calendar, notes per application, success-rate analytics, and a resume/cover-letter file attachment per entry. UI: calm gray-blue palette, kanban-style pipeline board. Assets: none needed.
+
+### 53. Research Journal Management System
+> Build a research/journal submission management system (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: manuscript submission portal, editor assignment and reviewer-invitation workflow, blind peer-review with structured feedback forms, plagiarism-check-result field, revision-cycle tracking, and a published-archive with citation-friendly formatting. UI: formal deep-maroon-and-cream palette, academic serif typography, document-card layout. Assets: none needed.
+
+### 54. Crowdfunding Platform
+> Build a crowdfunding platform (React + Vite + Tailwind + Zustand, Firebase Firestore, Stripe test-mode payments). Features: campaign creation with funding goal and tiers/rewards, secure contribution checkout, real-time progress-bar tracking, backer-update posts, campaign-success-story showcase, and a creator payout dashboard. UI: teal-to-orange gradient palette, bold progress-bar-forward campaign cards. Assets: auto-generate a campaign cover image via an image-generation API from the campaign pitch if none is uploaded; no music.
+
+### 55. Sports League Management System
+> Build a sports league management system (React + Vite + Tailwind + Zustand, Supabase/Postgres). Features: team and league registration, fixture/schedule generator, live score entry and standings auto-update, player-statistics tracking, ticket-booking module for matches, and fan-facing news/notification feed. UI: customizable team-color scoreboard palette (default navy/white with a bold accent), bold numeral-forward scoreboard typography. Assets: none needed.
+
+### 56. Digital Wallet App
+> Build a digital wallet/fintech app (React + Vite + Tailwind + Zustand, Supabase/Postgres with strict transaction integrity). Features: linked-account/card management, peer-to-peer transfers, QR-code payments, bill-pay, transaction history with categorized spend view, budget alerts, and biometric/PIN-lock simulation. UI: fintech black-and-neon-green palette, card-stack UI for linked accounts, monospace balance display. Assets: none needed.
+
+### 57. Gaming Tournament Portal
+> Build a gaming tournament portal (React + Vite + Tailwind + Zustand, Firebase Firestore for live bracket updates). Features: tournament registration, auto-generated brackets (single/double elimination), live match-result reporting, real-time leaderboard, team-formation tools, prize-pool/distribution display, and spectator live-updates feed. UI: esports dark theme with neon purple-and-blue accents, angular bracket-tree visualization. Assets: auto-generate a tournament banner image via an image-generation API from the tournament name/theme; no music required, but offer an optional hype-track generated via a music-generation API for the landing page.
+
+### 58. Virtual Stock Trading App
+> Build a virtual/paper stock-trading simulator (React + Vite + Tailwind + Zustand, a market-data API such as Alpha Vantage or a mock feed, Supabase/Postgres for portfolio state). Features: virtual cash balance and portfolio, buy/sell orders against live or simulated market data, real-time P&L tracking, interactive price charts with common indicators, a beginner tutorials section, and mock trading-competition leaderboards. UI: Bloomberg-terminal-inspired dark theme, green/red ticker coloring, dense monospace data tables. Assets: none needed.
+
+### 59. Home Services Booking App
+> Build a home-services booking app (React + Vite + Tailwind + Zustand, Firebase Firestore). Features: service-category browsing (plumbing/electrical/cleaning/etc.), provider search with ratings/reviews, appointment scheduling with real-time provider availability, secure in-app payment, service-completion confirmation with photo proof, and a provider-side booking/earnings dashboard. UI: friendly blue-and-white palette, service-card grid with a booking-calendar accent. Assets: auto-generate a default service-category icon/illustration via an image-generation API where a custom one isn't provided; no music.
+
+---
+
+**Note on uniqueness:** every project above was assigned a different color palette + layout metaphor on purpose — no two share the same combination — so a grader flipping through all 59 sees 59 distinct visual identities even though several share the same underlying stack.

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #0b0f19;
+  color: #f1f5f9;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}

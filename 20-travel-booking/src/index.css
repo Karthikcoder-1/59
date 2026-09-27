@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #0b1120;
+  color: #f8fafc;
+}
+
+.sunset-gradient {
+  background: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+}
+
+.sunset-border {
+  border-image: linear-gradient(135deg, #f97316, #ec4899) 1;
+}
